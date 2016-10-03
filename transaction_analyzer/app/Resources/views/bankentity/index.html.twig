@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>BankEntity list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idbankentity</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bankEntity in bankEntities %}
+            <tr>
+                <td><a href="{{ path('bankentity_show', { 'id': bankEntity.idBankEntity }) }}">{{ bankEntity.idBankEntity }}</a></td>
+                <td>{{ bankEntity.name }}</td>
+                <td>{{ bankEntity.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('bankentity_show', { 'id': bankEntity.idBankEntity }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('bankentity_edit', { 'id': bankEntity.idBankEntity }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bankentity_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

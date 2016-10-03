@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>LoanType list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idloantype</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for loanType in loanTypes %}
+            <tr>
+                <td><a href="{{ path('loantype_show', { 'id': loanType.idLoanType }) }}">{{ loanType.idLoanType }}</a></td>
+                <td>{{ loanType.name }}</td>
+                <td>{{ loanType.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('loantype_show', { 'id': loanType.idLoanType }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('loantype_edit', { 'id': loanType.idLoanType }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('loantype_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

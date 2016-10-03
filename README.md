@@ -2,7 +2,7 @@
 its a simple progect that help to take decisions to do bank transactions, like: loans , saving accounts. suggesting wich is the bank  Translate which it is the bank that offers less lost interest
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2016 irene argollo delgadillo >)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
