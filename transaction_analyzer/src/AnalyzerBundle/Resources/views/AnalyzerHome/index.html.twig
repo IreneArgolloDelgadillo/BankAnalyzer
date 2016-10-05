@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AnalyzerBundle:AnalyzerHome:Index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the AnalyzerHome:Index page</h1>
+<a href="{{ path('bankentity_index') }}">bankentity index</a> </br>
+<a href="{{ path('banktype_index') }}">bank type index</a> </br>
+<a href="{{ path('loan_index') }}">loan index</a> </br>
+<a href="{{ path('loantype_index') }}">loan type index</a> </br>
+{% endblock %}

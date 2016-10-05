@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AnalyzerBundle:Default:index.html.twig');
+        return $this->render('AnalyzerBundle:AnalyzerHome:index.html.twig');
     }
 }
