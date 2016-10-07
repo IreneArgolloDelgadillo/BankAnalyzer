@@ -7,6 +7,12 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <div>
+            <mark><a href="{{ path('bankentity_index') }}">Bancos</a> </mark>
+            <mark><a href="{{ path('loan_index') }}">Prestamos</a> </mark>
+            <mark><a href="{{ path('banktype_index') }}">tipos de Bancos</a> </mark>
+            <mark><a href="{{ path('loantype_index') }}">Tipos de pretamos</a> </mark>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
